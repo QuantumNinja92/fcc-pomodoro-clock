@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pomodoro Clock</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+                <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="container">
+        <h2 class="col-md-6 col-md-offset-3">FreeCodeCamp</h2>
+        <div id="counters" class="col-md-6 col-md-offset-3">
+            <div class="col-md-4 col-md-offset-1">
+            <span>Break Length</span>
+            <div><button onclick="decrease('break')">-&nbsp;</button><span id="break" class="counter">5</span><button onclick="increase('break')">&nbsp;+</button></div>
+            </div>
+            <div class="col-md-4 col-md-offset-2">
+            <span>Session Length</span>
+            <div><button onclick="decrease('session')">-&nbsp;</button><span id="session" class="counter">25</span><button onclick="increase('session')">&nbsp;+</button></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <button class="switch" onclick="init()">Session</button>
+            <span class="clock" id="clock">0:59</span>
+            <canvas id="Circle" class="col-md-12"></canvas>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

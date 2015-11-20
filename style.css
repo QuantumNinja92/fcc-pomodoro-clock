@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body{
+    color: #fff;
+    background-color: #333333;
+}
+
+h2{
+font-family: 'Pacifico';
+font-size: 6em;
+font-weight: 600;
+}
+#counters{
+    font-size: 1.5em;
+    padding: 20px;
+}
+.counter{
+    font-size: 1.8em;
+}
+
+button {     
+    font-size: 2em;
+    background-color: #333333;
+    border:0;
+}
+.switch{
+    font-size: 3.5em;
+    z-index: 1000;
+    position: absolute;
+    left: 32%;
+    top: 20%;
+    background-color: Transparent;
+}
+.clock{
+        font-size: 4em;
+    z-index: 1000;
+    position: absolute;
+    left: 39%;
+    top: 49%;
+    background-color: Transparent;
+}
+
+
+@media screen and (max-width: 992px) and (min-width: 401px){
+        h2{
+        font-size: 3em;
+        font-weight:400;
+    }
+    #counters{
+    font-size: 1em;
+    padding: 20px;
+    }
+    .counter{
+        font-size:1em;
+    }
+
+    button {     
+        font-size: 1em;
+        
+    }
+    .switch{
+    left: 18%;
+    top: 20%;
+        font-size: 2em;
+    }
+    
+    .clock{
+        left: 20%;
+        top: 49%;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    h2{
+        font-size: 3em;
+        font-weight:400;
+    }
+    #counters{
+    font-size: 1em;
+    padding: 20px;
+    }
+    .counter{
+        font-size:1em;
+    }
+
+    button {     
+        font-size: 1em;
+    }
+    .switch, .clock{
+        font-size: 2em;
+    }
+}
