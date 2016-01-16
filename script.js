@@ -6,7 +6,7 @@
 var audio = new Audio('http://dl.dropboxusercontent.com/s/0x5ay5pnf3246yk/timer.mp3?dl=0');
         var full = radius*2;
         var amount = 0;
-        var amountToIncrease = 10; // this will be controlled by our timer
+        var amountToIncrease = 0; // this will be controlled by our timer
         var time = 0;
         var interval;
 
@@ -37,7 +37,7 @@ var audio = new Audio('http://dl.dropboxusercontent.com/s/0x5ay5pnf3246yk/timer.
             amount += amountToIncrease;
             if (amount > full) amount = 0; // restart
         }
-        
+
         function decrease(id){
             var btn = document.getElementById(id);
             var val = parseInt(btn.innerHTML);
@@ -75,12 +75,15 @@ var audio = new Audio('http://dl.dropboxusercontent.com/s/0x5ay5pnf3246yk/timer.
             var btnbreak = document.getElementById('break');
             var valsession = parseInt(btnsession.innerHTML);
             var valbreak = parseInt(btnbreak.innerHTML);
-            amountToIncrease = valsession * 60/20;
+            amountToIncrease = full/(valsession*60);
+            console.log(amountToIncrease);
+            console.log(full);
+            console.log(valsession);
             time = 60*valsession;
             interval = setInterval(clockCounter, 1099);
-            
+
         }
-        
+
         draw();
         // Every second we'll fill more;
         //setInterval(draw, 1000);
